@@ -1,8 +1,0 @@
-*.iml
-.idea/
-*.iws
-
-.DS_Store
-
-log/
-target/
