@@ -34,7 +34,7 @@ public class RestraurantService extends BaseService{
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Restaurant_>  restaurant_ = restTemplate.exchange("https://developers.zomato.com/api/v2.1/restaurant?res_id="+res_id,HttpMethod.GET,super.setApiKeyInHeader(),Restaurant_.class);
         Restaurant_ rest_ = restaurant_.getBody();
-        logger.info("Restaurant_ details..>>>"+rest_);
+        logger.info("Restaurant_ details..>>><<<"+rest_);
         return rest_;
     }
 }
