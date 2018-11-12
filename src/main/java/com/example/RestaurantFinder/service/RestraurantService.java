@@ -23,7 +23,7 @@ public class RestraurantService extends BaseService{
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<RestraurantSearchResponse> responseObj = restTemplate.exchange("https://developers.zomato.com/api/v2.1/search?entity_id=94741&entity_type=zone", HttpMethod.GET,super.setApiKeyInHeader(),RestraurantSearchResponse.class);
         RestraurantSearchResponse restraurantSearchResponse = responseObj.getBody();
-        logger.info("Total #### of restraurants returned : " + restraurantSearchResponse.getRestaurants().size());
+        logger.info("Sample logger: " + restraurantSearchResponse.getRestaurants().size());
         return restraurantSearchResponse;
     }
 
